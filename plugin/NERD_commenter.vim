@@ -1070,7 +1070,7 @@ function s:CommentLinesToggle(forceNested, firstLine, lastLine)
             if align == 'left' || align == 'start' || align == 'both'
                 let theLine = s:AddLeftDelimAligned(s:Left({'space': 1}), theLine, leftAlignIndx)
             else
-                let theLine = s:AddLeftDelim(s:Left({'space': 1}), theLine)
+                let theLine = s:AddLeftDelimAligned(s:Left({'space': 1}), theLine, 0)
             endif
             if align == "both"
                 let theLine = s:AddRightDelimAligned(s:Right({'space': 1}), theLine, rightAlignIndx)
